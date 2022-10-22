@@ -43,11 +43,11 @@ class DocumentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Document $testResult
+     * @param  \App\Models\Document $document
      *
      * @return \Illuminate\Http\Response
      */
-    public function show(Document $testResult)
+    public function show(Document $document)
     {
         //
     }
@@ -55,11 +55,11 @@ class DocumentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Document  $testResult
+     * @param  \App\Models\Document  $document
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Document $testResult)
+    public function edit(Document $document)
     {
         //
     }
@@ -68,11 +68,11 @@ class DocumentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdateDocumentRequest  $request
-     * @param \App\Models\Document  $testResult
+     * @param \App\Models\Document  $document
      *
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDocumentRequest $request, Document $testResult)
+    public function update(UpdateDocumentRequest $request, Document $document)
     {
         //
     }
@@ -80,11 +80,11 @@ class DocumentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Document  $testResult
+     * @param \App\Models\Document  $document
      *
      * @return \Illuminate\Http\Response
      */
-	public function destroy(Document $testResult)
+	public function destroy(Document $document)
     {
         //
     }

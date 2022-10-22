@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TestResultResource\Pages;
+use App\Filament\Resources\DocumentResource\Pages;
 use App\Models\Document;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
@@ -77,7 +77,7 @@ class DocumentResource extends Resource
             'index' => Pages\ListDocuments::route('/'),
             'create' => Pages\CreateDocument::route('/create'),
             'view' => Pages\ViewDocument::route('/{record}'),
-            //            'edit' => Pages\EditTestResult::route('/{record}/edit'),
+            //            'edit' => Pages\EditDocument::route('/{record}/edit'),
         ];
     }
 }

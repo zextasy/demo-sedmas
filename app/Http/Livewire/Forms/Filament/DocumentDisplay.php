@@ -9,19 +9,19 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Livewire\Component;
 
-class TestResultDisplay extends Component implements HasForms
+class DocumentDisplay extends Component implements HasForms
 {
     use InteractsWithForms;
 
-    public Document $testResult;
+    public Document $document;
 
     public function mount(): void
     {
         $this->form->fill([
-            'reference' => $this->testResult->reference,
-            'customer_email' => $this->testResult->customer_email,
-            'customer_phone_number' => $this->testResult->customer_phone_number,
-            'result_image' => $this->testResult->testType->name,
+            'reference' => $this->document->reference,
+            'customer_email' => $this->document->customer_email,
+            'customer_phone_number' => $this->document->customer_phone_number,
+            'result_image' => $this->document->testType->name,
         ]);
     }
 

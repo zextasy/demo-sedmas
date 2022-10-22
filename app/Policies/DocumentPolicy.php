@@ -25,13 +25,13 @@ class DocumentPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Document $testResult
+     * @param  \App\Models\Document $document
      *
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Document $testResult)
+    public function view(User $user, Document $document)
     {
-        return $user->hasPermissionTo('backend') || $testResult->customer_email == $user->email;
+        return $user->hasPermissionTo('backend') || $document->customer_email == $user->email;
     }
 
     /**
@@ -49,11 +49,11 @@ class DocumentPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Document  $testResult
+     * @param  \App\Models\Document  $document
      *
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Document $testResult)
+    public function update(User $user, Document $document)
     {
         return $user->hasPermissionTo('backend');
     }
@@ -62,11 +62,11 @@ class DocumentPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param \App\Models\Document  $testResult
+     * @param \App\Models\Document  $document
      *
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Document $testResult)
+    public function delete(User $user, Document $document)
     {
         return $user->isFilamentAdmin();
     }
@@ -75,11 +75,11 @@ class DocumentPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param \App\Models\Document  $testResult
+     * @param \App\Models\Document  $document
      *
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Document $testResult)
+    public function restore(User $user, Document $document)
     {
         return $user->isFilamentAdmin();
     }
@@ -88,11 +88,11 @@ class DocumentPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param \App\Models\Document  $testResult
+     * @param \App\Models\Document  $document
      *
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Document $testResult)
+    public function forceDelete(User $user, Document $document)
     {
         return $user->isFilamentAdmin();
     }

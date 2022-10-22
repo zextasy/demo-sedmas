@@ -12,16 +12,16 @@ class NewDocumentAddedEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public Document $testResult;
+    public Document $document;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(Document $testResult)
+    public function __construct(Document $document)
     {
-        $this->testResult = $testResult;
+        $this->document = $document;
     }
 
     /**

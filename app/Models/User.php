@@ -70,12 +70,8 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail, Add
     //endregion
 
     //region RELATIONSHIPS
-    public function testBookings(): HasMany
-    {
-        return $this->hasMany(TestBooking::class, 'customer_email', 'email');
-    }
 
-    public function testResults(): HasMany
+    public function documents(): HasMany
     {
         return $this->hasMany(Document::class, 'customer_email', 'email');
     }

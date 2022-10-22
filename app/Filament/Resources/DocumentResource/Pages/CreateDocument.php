@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\TestResultResource\Pages;
+namespace App\Filament\Resources\DocumentResource\Pages;
 
 use App\Filament\Resources\DocumentResource;
 use Filament\Resources\Pages\CreateRecord;
