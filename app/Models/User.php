@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Traits\Relationships\BelongsToBusinessGroup;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Webbingbrasil\FilamentTwoFactor\TwoFactorAuthenticatable;
 
 class User extends Authenticatable implements FilamentUser, MustVerifyEmail, AddressableContract
 {
@@ -28,6 +29,7 @@ class User extends Authenticatable implements FilamentUser, MustVerifyEmail, Add
     use MorphsAddresses;
     use BelongsToBusinessGroup;
     use HasTasks;
+    use TwoFactorAuthenticatable;
 
     //region CONFIG
     protected $fillable = [
